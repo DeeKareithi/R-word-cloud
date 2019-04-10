@@ -1,5 +1,5 @@
 ---
-title: "RBC NCD Word Cloud Data Viz"
+title: "Word Cloud Data Viz"
 author: "Dorcas K"
 date: "March 2019"
 output:
