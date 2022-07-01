@@ -1,5 +1,8 @@
-#clearing the working space
+#Dorcas Kareithi
+#APRIL 2019
+#TASK: Create word cloud
 
+#clearing the working space
 rm(list=ls())
 
 #Loading necessary libaries (if these packages are not installed, install them first)
@@ -16,7 +19,10 @@ library("ggplot2")
 
 #Loading the Data
 
-text <- readLines("YOUR_PATH\\q1_MALE.txt")
+setwd("YOUR_PATH")
+
+
+text <- readLines("q1_MALE.txt")
 
 
 docs <- Corpus(VectorSource(text))
@@ -61,7 +67,7 @@ head(demoFreq, length(text))
 
 set.seed(1234)
 #saving the image produced to a PNG
-png("YOUR_PATH\\q1_MALE.png",res=100)
+png("q1_MALE.png",res=100)
 wordcloud(words = demoFreq$word, freq = demoFreq$freq,scale=c(2,1), min.freq = 2,
           max.words=150, random.order=FALSE, random.color=FALSE, rot.per=0.35, colors=brewer.pal(8, "Set2"))
 dev.off()
